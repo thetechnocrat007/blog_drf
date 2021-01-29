@@ -10,7 +10,7 @@ from.forms import PostForm
 
 class PostList(ListView):
     queryset=Post.objects.all().order_by('likes')
-    template_name='blogpage.html'
+    template_name='blogpage2.html'
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
