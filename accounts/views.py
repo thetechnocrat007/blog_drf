@@ -37,3 +37,8 @@ def home(request):
     return render(request, 'index.html', {
         'user': request.user,
         })
+
+
+def about_api(request):
+    return render(request, 'about_api.html')
+

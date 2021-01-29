@@ -9,7 +9,7 @@ from.forms import PostForm
 
 
 class PostList(ListView):
-    queryset=Post.objects.all().order_by('likes')
+    queryset=Post.objects.all().order_by('-created_on')
     template_name='blogpage2.html'
 
     def get_context_data(self, **kwargs):
@@ -28,7 +28,7 @@ class PostDetail(DetailView):
     
 class PostListbyAuthor(ListView):
     model=Post
-    template_name='postsbyauthor.html'
+    template_name='postsbyauthor2.html'
     
 
     def get_queryset(self):

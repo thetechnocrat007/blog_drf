@@ -7,4 +7,6 @@ urlpatterns=[
     path('',views.home,name='home'),
     path('login',LoginView.as_view(), name='login'),
     path('logout',LogoutView.as_view(), name='logout'),
+    path('about_api',views.about_api, name='about_api'),
+    
 ]

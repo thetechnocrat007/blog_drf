@@ -42,16 +42,16 @@
   </head>
   <body class="text-center">
     
-<main class="form-signin">
-  <img class="mb-4" src="{% static 'accounts/bootstrap-logo.svg' %}" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+<main class="form-signin"><strong><h1 class="h3 mb-3 fw-normal">The Techcitizen</h1></strong> 
+  <img class="mb-4" src="{% static 'accounts/sd.png' %}" alt="" width="72" height="57">
+    
   <form method="POST">
     
     {% csrf_token%}
     {{form.as_p}}
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
+    <p class="mt-5 mb-3 text-muted">&copy; TheTechnocrat</p>
   </form>
 
 </main>

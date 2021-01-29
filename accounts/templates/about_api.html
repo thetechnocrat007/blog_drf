@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+    
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: auto;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+{% endblock style%}
+
+
+
+{% block content %}
+  
+  <div class="container">
+    <br>
+    
+    <h1 class="display-4">API Endpoints</h1>
+
+
+
+<table>
+    <tr>
+      <th>API URL</th>
+      <th>Arguments</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>/api/user</td>
+      <td>-</td>
+      <td>To get all users</td>
+    </tr>
+    <tr>
+      <td>/api/user/<pk:int></td>
+      <td>primary key- int</td>
+      <td>To get Details of a user</td>
+    </tr>
+    <tr>
+        <td>/api/post</td>
+        <td>-</td>
+        <td>To get all posts</td>
+      </tr>
+      <tr>
+        <td>/api/post/<pk:int></pk:int></td>
+        <td>primary key(post) - int</td>
+        <td>To get details of a post</td>
+      </tr>
+    <tr>
+      <td>/api/comment</td>
+      <td>primary key(post) - int</td>
+      <td>To get all comments</td>
+    </tr>
+    <tr>
+      <td>/api/comment/<pk:int></pk:int></td>
+      <td>primary key(comment) - int </td>
+      <td>To get details of all comments of a post</td>
+    </tr>
+
+  </table>
+  
+</div>
+
+{% endblock %}
