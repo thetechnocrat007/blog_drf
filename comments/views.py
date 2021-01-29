@@ -6,7 +6,6 @@ from accounts.models import UserProfile
 from posts.models import Post
 from comments.models import Comment
 
-
 def newcomment(request,pk):
     if request.method=='POST':
         form=CommentForm(request.POST)
@@ -20,4 +19,26 @@ def newcomment(request,pk):
     else:
         form=CommentForm()
     return render(request,'createcomment.html',{'form':form})
+ 
 
+
+""" 
+def newcomment(request,pk):
+    if request.method=='POST':
+        form=CommentForm(request.POST)
+        if form.is_valid:
+            c=form.save(commit=False)
+            c.c_author=request.user
+            c.post=Post.objects.get(pk=pk)
+            form.save()
+            #return redirect('postdetail',pk=pk)
+            return render(request,'postdetail',{'form':form,'pk':pk})
+       
+
+
+    else:
+        form=CommentForm()
+    return render(request,'createcomment.html',{'form':form})
+
+ """
+        

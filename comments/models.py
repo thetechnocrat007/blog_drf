@@ -15,3 +15,9 @@ class Comment(models.Model):
     
     def __str__(self):
         return self.content[:50]
+
+    def get_parentC(self):
+        return Comment.objects.filter(parent=None)
+
+    def children(self):
+        return Comment.objects.filter(parent=self)

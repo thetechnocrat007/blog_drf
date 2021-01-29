@@ -15,15 +15,17 @@ class PostList(ListView):
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
-        # Add in a QuerySet of all the books
+        
         context['user_context'] = self.request.user
         return context
 
 
 class PostDetail(DetailView):
     model=Post
-    template_name='postpage.html'
+    template_name='postpage2.html'
 
+    
+    
 class PostListbyAuthor(ListView):
     model=Post
     template_name='postsbyauthor.html'
@@ -61,3 +63,6 @@ def newpost(request):
         form=PostForm()
     return render(request,'createpost.html',{'form':form})
 
+"""def postlike(request):
+    if request.method=='POST':
+        post=get_object_or_404(Post,id=)"""
