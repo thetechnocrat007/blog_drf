@@ -127,3 +127,4 @@ STATIC_URL = '/static/'
 
 #mine changes
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
